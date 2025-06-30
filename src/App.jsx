@@ -2,6 +2,26 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Github, Mail, Linkedin } from 'lucide-react';
 
 const VideoPlayer = ({ src, title }) => {
+  // Check if src is a YouTube embed URL
+  const isYouTube = src && src.startsWith('https://www.youtube.com/embed/');
+  if (isYouTube) {
+    return (
+      <div className="relative rounded-xl overflow-hidden shadow-lg aspect-video">
+        <iframe
+          width="100%"
+          height="100%"
+          src={src}
+          title={title || 'YouTube video player'}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+          className="w-full h-full object-cover rounded-xl"
+        ></iframe>
+      </div>
+    );
+  }
+
   const [isFullscreen, setIsFullscreen] = useState(false);
   const videoRef = useRef(null);
   const containerRef = useRef(null);
@@ -173,7 +193,7 @@ const App = () => {
           </div>
         </div>
       ),
-      videoSrc: "Animiya final thought 2 - Made with Clipchamp.mp4",
+      videoSrc: "https://www.youtube.com/embed/owW5fdBvuxc?si=Ejmi82nN5dLJmP84",
       technologies: ["React", "DRF", "TF-IDF", "Scrapy", "JWT", "Machine Learning"]
     },
     {
@@ -190,7 +210,7 @@ const App = () => {
           <p className="mt-4 text-blue-600">Designed to compete with ChatGPT, delivering high accuracy and versatility across multiple use cases.</p>
         </div>
       ),
-      videoSrc: "Ai-agent - Made with Clipchamp.mp4",
+      videoSrc: "https://www.youtube.com/embed/EOi3XuwCoQk?si=lvPIMsJ9X9OTCg7i",
       technologies: ["Streamlit", "Python", "Deepseek API", "Voice Recognition", "NLP"]
     },
     {
@@ -214,7 +234,7 @@ const App = () => {
           </div>
         </div>
       ),
-      videoSrc: "Untitled video - Made with Clipchamp (4).mp4",
+      videoSrc: "https://www.youtube.com/embed/WvezKtp8z_w?si=HkaClZuhqfxFI_V5",
       technologies: ["MLflow", "DVC", "Docker", "AWS EKS", "GitHub Actions", "Python", "CI/CD"]
     }
   ];
