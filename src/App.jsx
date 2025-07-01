@@ -193,7 +193,7 @@ const App = () => {
           </div>
         </div>
       ),
-      videoSrc: "https://www.youtube.com/embed/owW5fdBvuxc?si=Ejmi82nN5dLJmP84",
+      videoSrc: "https://www.youtube.com/embed/EOi3XuwCoQk?si=9JhlFp1efrXN09vS",
       technologies: ["React", "DRF", "TF-IDF", "Scrapy", "JWT", "Machine Learning"]
     },
     {
@@ -210,7 +210,7 @@ const App = () => {
           <p className="mt-4 text-blue-600">Designed to compete with ChatGPT, delivering high accuracy and versatility across multiple use cases.</p>
         </div>
       ),
-      videoSrc: "https://www.youtube.com/embed/EOi3XuwCoQk?si=lvPIMsJ9X9OTCg7i",
+      videoSrc: "https://www.youtube.com/embed/WvezKtp8z_w?si=lmCscA2ZmuzXAm9y",
       technologies: ["Streamlit", "Python", "Deepseek API", "Voice Recognition", "NLP"]
     },
     {
@@ -234,7 +234,7 @@ const App = () => {
           </div>
         </div>
       ),
-      videoSrc: "https://www.youtube.com/embed/WvezKtp8z_w?si=HkaClZuhqfxFI_V5",
+      videoSrc: "https://www.youtube.com/embed/owW5fdBvuxc?si=7nBgwPacvPRd1gd9",
       technologies: ["MLflow", "DVC", "Docker", "AWS EKS", "GitHub Actions", "Python", "CI/CD"]
     }
   ];
