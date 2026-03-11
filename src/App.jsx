@@ -25,12 +25,11 @@ const App = () => {
 
             <li>• Automated extraction of emails and phone numbers from thousands of PDF text files.</li>
 
-            <li>• Implemented repository synchronization from GitHub and automated document scanning.</li>
+            <li>• Pulled document data directly from GitHub repositories for automated processing.</li>
 
-            <li>• Generated structured JSON outputs and inserted records into MySQL database.</li>
+            <li>• Generated structured JSON outputs and stored extracted contacts in MySQL database.</li>
 
-            <li>• Built end-to-end pipeline: Repository Sync → Document Scan → Contact Extraction → Database.</li>
-
+            <li>• Built end-to-end pipeline: GitHub Data Fetch → PDF Processing → Contact Extraction → MySQL Storage.</li>
           </ul>
 
         </div>
@@ -57,14 +56,13 @@ const App = () => {
 
           <ul className="space-y-2 text-slate-300 text-sm">
 
-            <li>• Built conversational AI assistant supporting English and Hinglish interaction.</li>
+            <li>• Handle 5+ URLs or process 5+ documents simultaneously.</li>
 
-            <li>• Implemented multi-URL document ingestion for automated information extraction.</li>
+            <li>• Personalization support – customize AI responses based on your preferences.</li>
 
-            <li>• Integrated reasoning modes including search and deep analysis.</li>
+            <li>• Deep thinking and advanced search options enabled.</li>
 
-            <li>• Configurable AI personality for research, document analysis and knowledge retrieval.</li>
-
+            <li>• Built-in voice assistance – no need to type prompts, just speak.</li>
           </ul>
 
         </div>
@@ -91,13 +89,13 @@ const App = () => {
 
           <ul className="space-y-2 text-slate-300 text-sm">
 
-            <li>• Designed RESTful APIs using Python for product and user management.</li>
+            <li>• Easy to scale and maintain with a microservices architecture.</li>
 
-            <li>• Built responsive frontend using React with Shopify integration.</li>
+            <li>• Built responsive frontend using React with Django backend.</li>
 
             <li>• Containerized services using Docker and implemented CI/CD pipelines.</li>
 
-            <li>• Integrated recommendation system using machine learning.</li>
+            <li>• Integrated recommendation system using Content-Based filtering with machine learning.</li>
 
           </ul>
 
@@ -125,7 +123,7 @@ const App = () => {
 
           <ul className="space-y-2 text-slate-300 text-sm">
 
-            <li>• Built sentiment analysis model using machine learning algorithms.</li>
+            <li>• Fully - focused on building a robust MLOps pipeline for sentiment analysis.</li>
 
             <li>• Implemented experiment tracking and model management with MLflow.</li>
 
