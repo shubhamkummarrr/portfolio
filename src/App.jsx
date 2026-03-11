@@ -5,76 +5,153 @@ const App = () => {
 
   const projects = [
     {
-      title: "Animiya",
+      title: "Project 01",
       description: (
         <div>
-          <p className="font-semibold text-xl mb-4">
-            Full-stack AI powered Anime recommendation platform
+
+          <h3 className="font-bold text-2xl mb-1">
+            Email & Phone Extraction Automation
+          </h3>
+
+          <p className="text-slate-400 text-sm mb-4">
+            Large Scale Contact Extraction Pipeline
           </p>
 
-          <ul className="space-y-1 text-gray-300">
-            <li>Scraped anime metadata using Scrapy</li>
-            <li>Built TF-IDF recommendation engine</li>
-            <li>Developed Django REST backend APIs</li>
-            <li>Implemented JWT authentication</li>
-            <li>React frontend for social media features</li>
+          <p className="text-xs text-slate-300 mb-5">
+            Python • Regex • MySQL • Git Automation
+          </p>
+
+          <ul className="space-y-2 text-slate-300 text-sm">
+
+            <li>• Automated extraction of emails and phone numbers from thousands of PDF text files.</li>
+
+            <li>• Implemented repository synchronization from GitHub and automated document scanning.</li>
+
+            <li>• Generated structured JSON outputs and inserted records into MySQL database.</li>
+
+            <li>• Built end-to-end pipeline: Repository Sync → Document Scan → Contact Extraction → Database.</li>
+
           </ul>
+
         </div>
       ),
-      videoSrc: "https://www.youtube.com/embed/EOi3XuwCoQk"
+      videoSrc: "https://www.youtube.com/embed/GENCFYeVmbE"
     },
 
     {
-      title: "AI Agent R10528",
+      title: "Project 02",
       description: (
         <div>
-          <p className="font-semibold text-xl mb-4">
-            Autonomous AI assistant capable of document analysis and reasoning
+
+          <h3 className="font-bold text-2xl mb-1">
+            AI Agent R10528
+          </h3>
+
+          <p className="text-slate-400 text-sm mb-4">
+            Autonomous AI Research Assistant
           </p>
 
-          <ul className="space-y-1 text-gray-300">
-            <li>Multi-URL document ingestion pipeline</li>
-            <li>Voice interaction interface</li>
-            <li>Custom AI personality configuration</li>
-            <li>Deep reasoning mode for complex queries</li>
+          <p className="text-xs text-slate-300 mb-5">
+            Python • NLP • AI Agents
+          </p>
+
+          <ul className="space-y-2 text-slate-300 text-sm">
+
+            <li>• Built conversational AI assistant supporting English and Hinglish interaction.</li>
+
+            <li>• Implemented multi-URL document ingestion for automated information extraction.</li>
+
+            <li>• Integrated reasoning modes including search and deep analysis.</li>
+
+            <li>• Configurable AI personality for research, document analysis and knowledge retrieval.</li>
+
           </ul>
+
         </div>
       ),
       videoSrc: "https://www.youtube.com/embed/WvezKtp8z_w"
     },
 
     {
-      title: "MLOps Pipeline",
+      title: "Project 03",
       description: (
         <div>
-          <p className="font-semibold text-xl mb-4">
-            Production-ready sentiment analysis ML pipeline
+
+          <h3 className="font-bold text-2xl mb-1">
+            Scalable E-Commerce Platform
+          </h3>
+
+          <p className="text-slate-400 text-sm mb-4">
+            Microservices Based E-Commerce Architecture
           </p>
 
-          <ul className="space-y-1 text-gray-300">
-            <li>Experiment tracking with MLflow</li>
-            <li>Dataset versioning using DVC</li>
-            <li>Dockerized training and inference services</li>
-            <li>CI/CD pipeline with GitHub Actions</li>
-            <li>Deployment on AWS infrastructure</li>
+          <p className="text-xs text-slate-300 mb-5">
+            Python • React • Docker • CI/CD • AWS
+          </p>
+
+          <ul className="space-y-2 text-slate-300 text-sm">
+
+            <li>• Designed RESTful APIs using Python for product and user management.</li>
+
+            <li>• Built responsive frontend using React with Shopify integration.</li>
+
+            <li>• Containerized services using Docker and implemented CI/CD pipelines.</li>
+
+            <li>• Integrated recommendation system using machine learning.</li>
+
           </ul>
+
+        </div>
+      ),
+      videoSrc: "https://www.youtube.com/embed/iXKHKb7xQHE"
+    },
+
+    {
+      title: "Project 04",
+      description: (
+        <div>
+
+          <h3 className="font-bold text-2xl mb-1">
+            Sentiment Analysis MLOps Pipeline
+          </h3>
+
+          <p className="text-slate-400 text-sm mb-4">
+            Production Ready Machine Learning Workflow
+          </p>
+
+          <p className="text-xs text-slate-300 mb-5">
+            Python • Docker • MLflow • CI/CD • AWS
+          </p>
+
+          <ul className="space-y-2 text-slate-300 text-sm">
+
+            <li>• Built sentiment analysis model using machine learning algorithms.</li>
+
+            <li>• Implemented experiment tracking and model management with MLflow.</li>
+
+            <li>• Containerized training and inference services using Docker.</li>
+
+            <li>• Automated CI/CD deployment pipeline on AWS infrastructure.</li>
+
+          </ul>
+
         </div>
       ),
       videoSrc: "https://www.youtube.com/embed/owW5fdBvuxc"
     }
+
   ]
 
   const experience = [
     {
       role: "Data Scientist",
-      date: "Jul 2025 - Present",
+      date: "Mar 2025 - Mar 2026",
       company: "Hackveda Solutions",
       points: [
-        "Built automated pipelines extracting structured GitHub data for AI training",
-        "Managed and coordinated 120+ data annotation interns",
-        "Designed workflow producing 13,000+ labeled samples daily",
-        "Deployed AWS EC2 infrastructure supporting 1000+ concurrent users",
-        "Mentored interns in Python, data analysis, and machine learning workflows"
+        "Built automated data extraction and ETL pipelines using Python to collect GitHub data and update databases through a unified workflow.",
+        "Led Spinny annotation projects, managing 120+ interns/day (30 avg. - Active) and delivering 13K+ annotations/day (Project-1) and 3K annotations/day avg. (Project-2)",
+        "Created and set up an AWS EC2 instance that can handle up to 1,000 users and has 1 TB storage, used by annotators to work on the project and manage data.",
+        "Mentored interns in Python & Data Analysis through real-world, production-oriented projects",
       ]
     }
   ]
@@ -96,7 +173,9 @@ const App = () => {
 
   return (
 
-    <div className="nature-bg text-slate-100">
+    <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-slate-100 min-h-screen">
+
+      <div className="fixed inset-0 -z-10 bg-gradient-to-br from-black/75 via-slate-950/40 to-black/75"></div>
 
       {/* HERO */}
 
@@ -112,7 +191,7 @@ const App = () => {
         </h1>
 
         <p className="text-xl text-slate-300 mt-2">
-          Data Analyst • Machine Learning Engineer
+          Data Analyst • Data Pipelines • Automation
         </p>
 
         <p className="text-slate-400 mt-3 max-w-2xl">
@@ -179,37 +258,42 @@ const App = () => {
         <div className="max-w-5xl mx-auto space-y-10 px-6">
 
           <div className="border-l-4 border-blue-500 pl-6">
-            <h3 className="text-xl font-semibold mb-2">Data Collection</h3>
+            <h3 className="text-xl font-semibold mb-2">Data Collection & Extraction</h3>
             <p className="text-slate-300">
-              Web Scraping (Scrapy, BeautifulSoup), REST APIs, Data Ingestion
+              Python, Web Scraping (BeautifulSoup, Scrapy), REST APIs, Data Ingestion
             </p>
           </div>
 
           <div className="border-l-4 border-green-500 pl-6">
-            <h3 className="text-xl font-semibold mb-2">Data Processing</h3>
+            <h3 className="text-xl font-semibold mb-2">Data Processing & Preparation</h3>
             <p className="text-slate-300">
-              Python, Pandas, NumPy, SQL, ETL Pipelines, Feature Engineering
-            </p>
-          </div>
-
-          <div className="border-l-4 border-purple-500 pl-6">
-            <h3 className="text-xl font-semibold mb-2">Data Analysis</h3>
-            <p className="text-slate-300">
-              Exploratory Data Analysis, Power BI, Plotly Dashboards
+              Python (Pandas, NumPy), SQL, Data Cleaning, Data Transformation, ETL Pipelines, Feature Engineering
             </p>
           </div>
 
           <div className="border-l-4 border-yellow-500 pl-6">
-            <h3 className="text-xl font-semibold mb-2">Machine Learning</h3>
+            <h3 className="text-xl font-semibold mb-2">Data Analysis & Visualization</h3>
             <p className="text-slate-300">
-              Scikit-learn, XGBoost, NLP Models, Model Evaluation
+              Exploratory Data Analysis (EDA), Statistical Analysis, Power BI, Matplotlib, Plotly
             </p>
           </div>
 
           <div className="border-l-4 border-red-500 pl-6">
-            <h3 className="text-xl font-semibold mb-2">MLOps</h3>
+            <h3 className="text-xl font-semibold mb-2">Machine Learning</h3>
             <p className="text-slate-300">
-              Docker, MLflow, DVC, CI/CD, AWS EC2
+              Scikit-learn, Random Forest, NLP Models, Model Evaluation
+            </p>
+          </div>
+          <div className="border-l-4 border-gray-500 pl-6">
+            <h3 className="text-xl font-semibold mb-2">Automation & Data Pipelines</h3>
+            <p className="text-slate-300">
+              Workflow Automation, Task Scheduling, Data Pipeline Development
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-500 pl-6">
+            <h3 className="text-xl font-semibold mb-2">Deployment & MLOps</h3>
+            <p className="text-slate-300">
+              Docker, MLflow, CI/CD Pipelines, AWS, Git & GitHub
             </p>
           </div>
 
@@ -220,13 +304,109 @@ const App = () => {
 
       {/* PROJECTS */}
 
-      <section className="py-20 bg-slate-800">
+      <section className="py-20 bg-slate-900/80 backdrop-blur-sm">
 
-        <h2 className="text-3xl font-bold text-center mb-12">
+        <h2 className="text-3xl font-bold text-center mb-10">
           Projects
         </h2>
 
         <div className="max-w-6xl mx-auto px-6">
+          <section className="max-w-6xl mx-auto px-6 py-12 bg-slate-800/50 border border-slate-700 rounded-2xl shadow-xl">
+
+            <div className="mb-8">
+              <h1 className="text-3xl font-bold text-slate-100">
+                Housing Data Analysis of PMAY (Pradhan Mantri Awas Yojana)
+              </h1>
+              <p className="text-slate-300 mt-2">
+                High-impact Power BI analytics of fund allocation and beneficiary trends.
+              </p>
+            </div>
+
+            {/* <!-- Tools --> */}
+            <div className="mb-8">
+              <h2 className="text-lg font-semibold text-slate-100 mb-2">Tools Used</h2>
+              <div className="flex flex-wrap gap-3">
+                <span className="bg-slate-700 px-3 py-1 rounded-md text-sm">Python (Pandas)</span>
+                <span className="bg-slate-700 px-3 py-1 rounded-md text-sm">Power BI</span>
+                <span className="bg-slate-700 px-3 py-1 rounded-md text-sm">Data Cleaning</span>
+                <span className="bg-slate-700 px-3 py-1 rounded-md text-sm">Data Visualization</span>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-10">
+              <div className="bg-slate-700 p-4 rounded-lg">
+                <p className="text-xl font-bold text-slate-100">49B</p>
+                <p className="text-sm text-slate-300">Total Sanctioned Funds</p>
+              </div>
+
+              <div className="bg-slate-700 p-4 rounded-lg">
+                <p className="text-xl font-bold text-slate-100">11B</p>
+                <p className="text-sm text-slate-300">Minority Allocation</p>
+              </div>
+
+              <div className="bg-slate-700 p-4 rounded-lg">
+                <p className="text-xl font-bold text-slate-100">38B</p>
+                <p className="text-sm text-slate-300">Other Category</p>
+              </div>
+
+              <div className="bg-slate-700 p-4 rounded-lg">
+                <p className="text-xl font-bold text-slate-100">42M</p>
+                <p className="text-sm text-slate-300">SC Beneficiaries</p>
+              </div>
+
+              <div className="bg-slate-700 p-4 rounded-lg">
+                <p className="text-xl font-bold text-slate-100">5M</p>
+                <p className="text-sm text-slate-300">ST Beneficiaries</p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-10">
+
+              <div className="bg-slate-800 border border-slate-700 rounded-lg p-5">
+                <h3 className="font-semibold mb-2 text-slate-100">District Completion Gap</h3>
+                <ul className="text-slate-300 text-sm space-y-1">
+                  <li>Sheohar: <strong>0 completed</strong> out of 2,960 houses</li>
+                  <li>Patna: <strong>47 completed</strong> out of 13,209 houses</li>
+                  <li>Indicates possible execution delays</li>
+                </ul>
+              </div>
+
+              <div className="bg-slate-800 border border-slate-700 rounded-lg p-5">
+                <h3 className="font-semibold mb-2 text-slate-100">Gender-based Allocation</h3>
+                <ul className="text-slate-300 text-sm space-y-1">
+                  <li>Married women received the largest housing share</li>
+                  <li>Unmarried women received significantly fewer allocations</li>
+                </ul>
+              </div>
+
+              <div className="bg-slate-800 border border-slate-700 rounded-lg p-5">
+                <h3 className="font-semibold mb-2 text-slate-100">SC vs ST Distribution</h3>
+                <ul className="text-slate-300 text-sm space-y-1">
+                  <li>SC beneficiaries received ~89% of funds</li>
+                  <li>ST beneficiaries received ~10%</li>
+                </ul>
+              </div>
+
+              <div className="bg-slate-800 border border-slate-700 rounded-lg p-5">
+                <h3 className="font-semibold mb-2 text-slate-100">Funding Trend</h3>
+                <ul className="text-slate-300 text-sm space-y-1">
+                  <li>Major investment spike observed in <strong className="text-slate-100">2025</strong></li>
+                  <li>Indicates expansion of housing investment</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div>
+              <h2 className="text-lg font-semibold mb-4 text-slate-100">Power BI Dashboard</h2>
+              <img
+                src="dashboard.png"
+                alt="PMAY Power BI Dashboard"
+                className="rounded-lg shadow-md border border-slate-700"
+              />
+            </div>
+
+          </section>
 
           <p className="text-center text-slate-500 mb-6">
             Project {currentProject + 1} / {projects.length}
