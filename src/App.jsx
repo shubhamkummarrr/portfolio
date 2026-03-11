@@ -177,11 +177,20 @@ const App = () => {
 
       {/* HERO */}
 
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6">
+      <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6">
+
+        <a
+          href="/RESUME.pdf"
+          download
+          className="absolute top-6 right-6 px-5 py-2 rounded-full bg-blue-500 text-white font-semibold hover:bg-blue-400 transition"
+        >
+          Download Resume
+        </a>
 
         <img
           src="photo.jpg"
-          className="w-50 h-60 rounded-[40%] mb-6 shadow-lg object-cover"
+          className="w-50 h-60 rounded-[40%] mb-4 shadow-lg object-cover"
+          alt="Shubham Kumar"
         />
 
         <h1 className="text-4xl font-bold">
