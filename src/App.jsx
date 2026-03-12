@@ -327,6 +327,12 @@ const App = () => {
               <p className="text-slate-300 mt-2">
                 High-impact Power BI analytics of fund allocation and beneficiary trends.
               </p>
+              <br />
+              <p>
+                Pradhan Mantri Awas Yojana (PMAY) is a government initiative launched to provide affordable housing to economically weaker sections of society. The program focuses on improving housing accessibility for rural and urban populations through financial assistance and infrastructure support.
+                <br />
+                This analysis examines fund allocation, beneficiary distribution, and housing completion trends using Power BI to identify key patterns and potential implementation gaps.
+              </p>
             </div>
 
             {/* <!-- Tools --> */}
