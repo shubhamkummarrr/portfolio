@@ -180,7 +180,7 @@ const App = () => {
       <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6">
 
         <a
-          href="/Shubham Resume.pdf"
+          href="/RESUME.pdf"
           download
           className="absolute top-6 right-6 px-5 py-2 rounded-full bg-blue-500 text-white font-semibold hover:bg-blue-400 transition"
         >
