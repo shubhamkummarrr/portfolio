@@ -293,7 +293,7 @@ const App = () => {
             </div>
           </section>
 
-          {/* ── GITHUB AUTOMATION PROJECT ── */}
+          {/* ── GITHUB AUTOMATION PROJECT ── ..*/}
           <section className="px-6 py-12 bg-slate-800/50 border border-green-800/40 rounded-2xl shadow-xl">
             <div className="flex flex-wrap items-center gap-3 mb-6">
               <span className="bg-green-600/25 border border-green-500/40 text-green-400 text-xs px-3 py-1 rounded-full font-semibold tracking-wide uppercase">
