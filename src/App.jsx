@@ -453,13 +453,24 @@ const App = () => {
               <p className="text-green-400 text-xs sm:text-sm font-mono">$ python run_all.py</p>
               <p className="text-slate-500 text-xs mt-1 font-mono">→ Cloning repo... → Processing files... → Extracting contacts... → Inserting into MySQL... ✓ Done.</p>
             </div>
+            <div>
+              <h2 className="text-sm sm:text-lg font-semibold text-slate-100 mb-3">Video Demo</h2>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  src="https://www.youtube.com/embed/GENCFYeVmbE"
+                  title="GitHub Automation Pipeline Demo"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full rounded-lg shadow-md border border-slate-700"
+                />
+              </div>
+            </div>
           </section>
 
           {/* CAROUSEL */}
-          
+
 
           {/* GITHUB LINKS */}
-          
+
         </div>
       </section>
 
