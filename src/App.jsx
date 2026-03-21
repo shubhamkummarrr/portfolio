@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { Menu, X } from "lucide-react"
 
 const App = () => {
 
@@ -142,6 +143,15 @@ const App = () => {
 
   const [currentProject, setCurrentProject] = useState(0)
   const [direction, setDirection] = useState(0)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+    setIsMenuOpen(false) // Close menu after navigation
+  }
 
   const nextProject = () => {
     setDirection(1)
@@ -165,10 +175,30 @@ const App = () => {
       <div className="fixed inset-0 -z-10 bg-gradient-to-br from-black/75 via-slate-950/40 to-black/75"></div>
 
       {/* HERO */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 pt-16 pb-10">
+      <section id="home" className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 pt-16 pb-10">
 
         {/* Resume button — fixed top bar, never overlaps photo */}
-        <div className="fixed top-0 left-0 right-0 z-50 flex justify-end px-4 py-3 sm:px-6 sm:py-4 bg-slate-950/80 backdrop-blur-sm border-b border-slate-800/50">
+        <div className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 py-3 sm:px-6 sm:py-4 bg-slate-950/80 backdrop-blur-sm border-b border-slate-800/50">
+          <nav className="hidden lg:flex space-x-4 sm:space-x-6">
+            <button onClick={() => scrollToSection('home')} className="text-slate-300 hover:text-white text-xs sm:text-sm font-medium transition-colors">
+              Home
+            </button>
+            <button onClick={() => scrollToSection('skills')} className="text-slate-300 hover:text-white text-xs sm:text-sm font-medium transition-colors">
+              Skills
+            </button>
+            <button onClick={() => scrollToSection('projects')} className="text-slate-300 hover:text-white text-xs sm:text-sm font-medium transition-colors">
+              Projects
+            </button>
+            <button onClick={() => scrollToSection('experience')} className="text-slate-300 hover:text-white text-xs sm:text-sm font-medium transition-colors">
+              Experience
+            </button>
+          </nav>
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden text-slate-300 hover:text-white transition-colors"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
           <a
             href="/Shubham Resume.pdf"
             download
@@ -177,6 +207,44 @@ const App = () => {
             Download Resume
           </a>
         </div>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ x: '-100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '-100%' }}
+              transition={{ type: 'tween', duration: 0.3 }}
+              className="fixed top-0 left-0 h-full w-64 bg-slate-900/95 backdrop-blur-sm z-40 flex flex-col pt-20 px-6"
+            >
+              <button
+                onClick={() => scrollToSection('home')}
+                className="text-slate-300 hover:text-white text-lg font-medium py-3 border-b border-slate-700 transition-colors"
+              >
+                Home
+              </button>
+              <button
+                onClick={() => scrollToSection('skills')}
+                className="text-slate-300 hover:text-white text-lg font-medium py-3 border-b border-slate-700 transition-colors"
+              >
+                Skills
+              </button>
+              <button
+                onClick={() => scrollToSection('projects')}
+                className="text-slate-300 hover:text-white text-lg font-medium py-3 border-b border-slate-700 transition-colors"
+              >
+                Projects
+              </button>
+              <button
+                onClick={() => scrollToSection('experience')}
+                className="text-slate-300 hover:text-white text-lg font-medium py-3 transition-colors"
+              >
+                Experience
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         <img
           src="photo.jpg"
@@ -210,7 +278,7 @@ const App = () => {
       </section>
 
       {/* ABOUT */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
+      <section id="about" className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
         <h2 className="text-xl sm:text-3xl font-bold text-center mb-5 sm:mb-8">About Me</h2>
         <p className="text-slate-300 text-sm sm:text-lg leading-relaxed text-left">
           I specialize in building complete data pipelines — from collecting raw data using APIs and
@@ -226,7 +294,7 @@ const App = () => {
       </section>
 
       {/* SKILLS */}
-      <section className="bg-slate-800 py-12 sm:py-20">
+      <section id="skills" className="bg-slate-800 py-12 sm:py-20">
         <h2 className="text-xl sm:text-3xl font-bold text-center mb-2 sm:mb-4">Skills</h2>
         <p className="text-center text-slate-400 mb-8 sm:mb-12 max-w-xl mx-auto text-xs sm:text-sm px-4">
           Core toolkit for Data Analyst roles — from raw data to insight delivery.
@@ -249,7 +317,7 @@ const App = () => {
       </section>
 
       {/* PROJECTS */}
-      <section className="py-12 sm:py-20 bg-slate-900/80 backdrop-blur-sm">
+      <section id="projects" className="py-12 sm:py-20 bg-slate-900/80 backdrop-blur-sm">
         <h2 className="text-xl sm:text-3xl font-bold text-center mb-8 sm:mb-10">Projects</h2>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8 sm:space-y-10">
@@ -396,7 +464,7 @@ const App = () => {
       </section>
 
       {/* EXPERIENCE */}
-      <section className="py-12 sm:py-20 bg-slate-800">
+      <section id="experience" className="py-12 sm:py-20 bg-slate-800">
         <h2 className="text-xl sm:text-4xl font-bold text-center mb-8 sm:mb-12">Experience</h2>
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           {experience.map((exp, index) => (
